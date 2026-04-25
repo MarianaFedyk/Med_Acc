@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAcc</title>
+    <link rel="stylesheet" href="style/redaction.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="parent">
+
+    <div class="background"></div>
+
+    <div class="logo">
+        <img src="data/pharma.png">
+        <a href="index.html">MedAcc</a>
+    </div>
+
+    <div class="user">
+        <a href="LogIn.html"><img src="data/user.png" alt="">  </a>
+    </div>
+
+    <div class="stuff">
+
+        <div class="tittle">
+            <p>Редагування</p>
+        </div>
+
+        <div class="search">
+            <input class="inputMed" type="text" placeholder="Назва лікарського засобу">
+            <button>Пошук</button>
+        </div>
+        <div class="content">
+            <div class="block-photo">
+                <div class="div7" id="photoBlock">
+    <img id="preview" src="" alt="">
+    <span>Фото</span>
+</div>
+
+<div class="popup" id="popup">
+    <div class="popup-content">
+        <p>Встав посилання на фото</p>
+        <input type="text" id="imgInput" placeholder="https://...">
+        <div class="popup-buttons">
+            <button id="saveImg">Зберегти</button>
+            <button id="closePopup">Скасувати</button>
+        </div>
+    </div>
+</div>
+            </div>
+
+            <div class="characteristics-1">
+                
+                <label>Категорія:</label>
+                <select id="categorySelect">
+                    <option value="">Завантаження...</option>
+                </select>
+
+                <label>Діючі речовини:</label>
+                <input type="text" id ="active_substances">
+
+                <label>Форма випуску:</label>
+                <input type="text" id="form">
+
+                <label>Дозування:</label>
+                <input type="text" id="dosage">
+            </div>
+
+            <div class="characteristics-2">
+                <label>Кількість в упаковці:</label>
+                <input type="text" id="pack_quantity">
+
+                <label>Кількість:</label>
+                <input type="text" id="stock_quantity">
+
+                <label>Торгова назва:</label>
+                <input type="text" id="trade_name">
+
+                <label>Ціна:</label>
+                <input type="text" id="price">
+            </div>
+
+        </div>
+
+        <div class="block-indications">
+            <label>Показання:</label>
+            <textarea id="indications"></textarea>
+        </div>
+
+        <div class="actions">
+            <button class="save">Оновити</button>
+            <button class="add">Додати</button>
+            <button class="delete">Видалити</button>
+        </div>
+    </div>
+</div>
+<script src="JavaScript/redaction.js"></script>
+
+</body>
+</html>

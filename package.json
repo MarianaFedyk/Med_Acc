@@ -1,0 +1,36 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "0 підключити гітхаб і в терміналі перевірити\r 1 переписати і зробити нормальну структуру файлів і папок\r 2 переназвати файли як треба\r 3 зробити нормальну навігацію\r 4 вивести колекцію препаратів на сайті через JS з папки data. Але там має бути масив препаратів. Забудь про ІД для виводу, виводь ітерацією з файла\r 5 зробити сторінки вхід, вихід, реєстрація\r 6 зробити функціонал реєстрації",
+  "main": "redaction.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "tailwindcss -i ./public/styles.css -o ./public/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.104.0",
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.2.0",
+    "prettier": "^3.8.2",
+    "tailwindcss": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarianaFedyk/MedAcc-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarianaFedyk/MedAcc-Project/issues"
+  },
+  "homepage": "https://github.com/MarianaFedyk/MedAcc-Project#readme"
+}

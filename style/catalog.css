@@ -1,0 +1,229 @@
+body {
+    background-color: #5BBCD9;
+    margin: 0;
+    font-family: "Marmelad", sans-serif;
+    color: #5BBCD9;
+}
+
+.header {
+    background-color: #5BBCD9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.user img {
+    width: 50px;
+    transition: 0.3s;
+}
+
+.user img:hover {
+    opacity: 0.8;
+}
+
+.container {
+    background-color: #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 40px 60px;
+
+    display: flex;
+    gap: 30px;
+    min-height: calc(100vh - 80px);
+}
+
+.sidebar {
+    width: 300px;
+    border: 3px solid #5BBCD9;
+    border-radius: 40px;
+    color: #5BBCD9;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar p {
+    text-align: left;
+    font-size: 20px;
+}
+
+.sidebar #tittle {
+    text-align: center;
+    font-size: 35px;
+}
+
+.price-title {
+    margin-top: 10px;
+}
+
+.price-range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.sidebar input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.categories button {
+    background-color: #fff;
+    outline: none;
+    border: none;
+    color: #5BBCD9;
+    font-family: "Marmelad", sans-serif;
+    text-align: left;
+    cursor: pointer;
+    font-size: large;
+}
+
+.categories button:hover {
+    color: rgb(76, 134, 152);
+    transition: 0.3s;
+}
+
+.content {
+    flex: 1;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    color: #5BBCD9;
+    font-family: "Marmelad", sans-serif;
+    font-size: large;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #5BBCD9;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #5BBCD9;
+}
+
+.search input::placeholder {
+    color: #ccc;
+}
+
+.search button {
+    background-color: #5BBCD9;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search button:hover {
+    background-color: #6bcae6;
+    transform: scale(1);
+}
+
+.search button img {
+    width: 25px;
+}
+
+.sidebar input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #fff;
+    border: 1px solid #5BBCD9;
+    border-radius: 10px;
+    outline: none;
+}
+
+.sidebar input[type="range"]::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.sidebar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #5BBCD9;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px; 
+}
+
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product{
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #5BBCD9;
+    color: #5BBCD9;
+    font-family: "Marmelad", sans-serif;
+}
+
+.product img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.product h3{
+    font-size: 18px;
+}
+
+.product p{
+    font-weight: bold;
+}
+
+#loadMoreBtn {
+    background-color: #5BBCD9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    font-family: "Marmelad", sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 20px auto;
+    display: block;
+}

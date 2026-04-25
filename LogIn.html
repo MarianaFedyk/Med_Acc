@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>MedAcc</title>
+<link rel="stylesheet" href="style/LogIn.css">
+    <link rel="stylesheet" href="style/index.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marmelad&family=Preahvihear&family=Viaoda+Libre&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<h1>MedAcc</h1>
+
+<div class="login-box">
+
+<h2>Вхід</h2>
+
+<form id="loginForm" >
+    <label for="login">Логін</label>
+    <input type="text" id="login" placeholder="Логін" required>
+    <label for="password">Пароль</label>
+    <input type="password" id="password" minlength="8" placeholder="Пароль" required>
+    <button type="submit">Увійти</button>
+    <a href="SignIn.html">Зареєструватися</a>
+</form>
+<p id="error" style="color:red;"></p>
+
+</div>
+<script src="JavaScript/LogIn.js"></script>
+</body>
+</html>

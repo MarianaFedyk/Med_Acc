@@ -1,0 +1,95 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: #5BBCD9;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    font-family: "Marmelad", sans-serif;
+}
+
+h1{
+    color:white;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.login-box{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    width:320px;
+    text-align:center;
+}
+
+.login-box h2{
+    color:#5BBCD9;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    text-align:left;
+    margin-top:10px;
+    color:#5BBCD9;
+    font-size:18px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:8px;
+    border:2px solid #5BBCD9;
+    outline:none;
+    transition: 0.3s;
+    color: #5BBCD9;
+    font-family: "Marmelad", sans-serif;
+}
+
+input:focus{
+    outline: none;
+    transform: scale(0.98);
+    box-shadow: 0 0 3px #5BBCD9;
+}
+
+input::placeholder{
+    color:#ccc;
+    font-size:14px;
+    font-family: "Marmelad", sans-serif;
+}
+
+button{
+    margin-top:25px;
+    width:70%;
+    padding:12px;
+    background:#5BBCD9;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition: 0.3s;
+    font-family: "Marmelad", sans-serif;
+}
+
+button:hover{
+    background:#4f97ab;
+    transform: 0.3s;
+}
+
+
+a{
+    text-decoration:none;
+    color:#5BBCD9;
+    transition: 0.3s;
+    
+}
+
+a:hover{
+    color:#4f97ab;
+    transform: 0.3s;
+}
