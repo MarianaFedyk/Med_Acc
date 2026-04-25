@@ -1,2 +1,25 @@
+# залежності
 node_modules/
+
+# змінні середовища (секрети)
 .env
+
+# лог-файли
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS файли
+.DS_Store
+Thumbs.db
+
+# build/production (якщо буде)
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# кеші
+.cache/
