@@ -1,0 +1,129 @@
+body {
+    background-color: #5BBCD9;
+    margin: 0;
+    font-family: "Marmelad", sans-serif;
+    color: #5BBCD9;
+}
+
+.header {
+    background-color: #5BBCD9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.user img {
+    width: 50px;
+    transition: 0.3s;
+}
+
+.user img:hover {
+    opacity: 0.8;
+}
+
+/* MAIN */
+
+.contacts-page{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 45px;
+}
+
+.contact-card{
+    width: 280px;
+    background-color: #ECECEC;
+    border-radius: 18px;
+    padding: 28px 38px;
+}
+
+.title{
+    text-align: center;
+    color: #5BBCD9;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label{
+    color: #5BBCD9;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    border: 2px solid #5BBCD9;
+    border-radius: 6px;
+    background-color: transparent;
+    outline: none;
+    font-family: "Marmelad", sans-serif;
+    font-size: 15px;
+    color: #5BBCD9;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.contact-form input{
+    margin-bottom: 14px;
+    height: 35px;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 130px;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus {
+    outline: none;
+    transform: scale(0.98);
+    box-shadow: 0 0 10px #5BBCD9;
+}
+
+.contact-form textarea:focus {
+    outline: none;
+    transform: scale(0.98);
+    box-shadow: 0 0 10px #5BBCD9;
+}
+
+.contact-form button{
+    width: 145px;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 6px;
+    background-color: #5BBCD9;
+    color: white;
+    font-family: "Marmelad", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover{
+    opacity: 0.85;
+}

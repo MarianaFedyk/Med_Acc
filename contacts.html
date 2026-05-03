@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+
+    <link rel="stylesheet" href="style/contacts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="data/pharma.png">
+            <a href="index.html">MedAcc</a>
+        </div>
+
+        <div class="user">
+            <a href="LogIn.html">
+                <img id="userIcon" src="data/log-in.png" alt="Користувач">
+            </a>
+        </div>
+    </header>
+
+    <main class="contacts-page">
+        <div class="contact-card">
+
+            <p class="title">Контакти</p>
+
+            <form class="contact-form" id="contactForm">
+
+                <label>E-mail</label>
+                <input type="email" id="emailInput" required>
+
+                <label>Повідомлення:</label>
+                <textarea id="messageInput" required></textarea>
+
+                <button type="submit">Відправити</button>
+
+            </form>
+
+        </div>
+    </main>
+
+    <script src="JavaScript/contacts.js"></script>
+</body>
+</html>

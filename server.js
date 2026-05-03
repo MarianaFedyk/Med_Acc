@@ -250,6 +250,28 @@ app.get('/me', (req, res) => {
     });
 });
 
+app.post('/send-message', async (req, res) => {
+    if (!req.session.user) {
+        return res.status(401).json({ message: 'Спочатку увійдіть в акаунт' });
+    }
+
+    const { email, message } = req.body;
+
+    const { error } = await supabase
+        .from('messages')
+        .insert([{
+            email,
+            message,
+            user_login: req.session.user.login
+        }]);
+
+    if (error) {
+        return res.status(500).json({ message: error.message });
+    }
+
+    res.json({ message: 'Повідомлення успішно надіслано!' });
+});
+
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
