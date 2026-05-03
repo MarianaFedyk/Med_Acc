@@ -1,0 +1,172 @@
+body {
+    background-color: #5BBCD9;
+    margin: 0;
+    font-family: "Marmelad", sans-serif;
+    color: #5BBCD9;
+}
+
+.header {
+    background-color: #5BBCD9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.user img {
+    width: 50px;
+    transition: 0.3s;
+}
+
+.user img:hover {
+    opacity: 0.8;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    background: #ECECEC;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    min-height: calc(100vh - 72px);
+    padding: 20px 45px;
+    box-sizing: border-box;
+}
+
+.title{
+    text-align: center;
+    color: #5BBCD9;
+    font-size: 42px;
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.report-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+/* COMMON TITLES */
+
+.block-title{
+    color: #5BBCD9;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* LEFT BLOCK */
+
+.products-block{
+    width: 48%;
+    color: #5BBCD9;
+}
+
+.category-list{
+    font-size: 20px;
+}
+
+.category-item{
+    margin-bottom: 12px;
+}
+
+.category-name{
+    cursor: pointer;
+    background-color: rgba(91, 188, 217, 0.10);
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-name:hover{
+    background-color: rgba(91, 188, 217, 0.20);
+}
+
+.medicine-list{
+    margin-left: 25px;
+    margin-top: 8px;
+    font-size: 17px;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.medicine-list.open{
+    max-height: 500px;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.medicine-list p{
+    margin: 4px 0;
+}
+
+.arrow{
+    font-size: 14px;
+}
+
+/* RIGHT BLOCK */
+
+.stats-block{
+    width: 45%;
+    color: #5BBCD9;
+}
+
+.total{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+
+.chart{
+    width: 100%;
+}
+
+.chart-top{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 3px solid #5BBCD9;
+    padding-bottom: 4px;
+}
+
+.bar-line{
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 12px;
+}
+
+.bar{
+    height: 24px;
+    background-color: #5BBCD9;
+    border-radius: 3px;
+}
+
+.bar-line span{
+    font-size: 20px;
+}

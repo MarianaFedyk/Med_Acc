@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report</title>
+
+    <link rel="stylesheet" href="style/report.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="data/pharma.png">
+            <a href="index.html">MedAcc</a>
+        </div>
+
+        <div class="user">
+            <a href="LogIn.html">
+                <img id="userIcon" src="data/user.png" alt="Користувач">
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <p class="title">Звіт</p>
+
+        <section class="report-content">
+
+            <div class="products-block">
+                <p class="block-title">Кількість товарів:</p>
+                <div class="category-list" id="categoryList"></div>
+            </div>
+
+            <div class="stats-block">
+                <p class="block-title">Статистика:</p>
+                <p class="total" id="totalMedicines">Всього - 0</p>
+
+                <div class="chart">
+                    <div class="chart-top">
+                        <span>0</span>
+                        <span id="maxValueText">0</span>
+                    </div>
+
+                    <div id="chartBars"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="JavaScript/report.js"></script>
+</body>
+</html>

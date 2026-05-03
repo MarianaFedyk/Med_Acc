@@ -109,6 +109,62 @@ app.delete('/medicine/:id', requireAdmin, async (req, res) => {
     res.json({ message: 'Видалено!' });
 });
 
+app.get('/report-data', requireAdmin, async (req, res) => {
+    try {
+        const { data: medicines, error: medError } = await supabase
+            .from('medecine')
+            .select('*');
+
+        const { data: categories, error: catError } = await supabase
+            .from('categories')
+            .select('*');
+
+        if (medError) return res.status(500).json({ message: medError.message });
+        if (catError) return res.status(500).json({ message: catError.message });
+
+        const report = [];
+        let totalAllMedicines = 0;
+        let maxCategoryValue = 0;
+
+        categories.forEach(category => {
+
+            const medicinesInCategory = medicines.filter(
+                med => med.category_id == category.id
+            );
+
+            let categorySum = 0;
+
+            medicinesInCategory.forEach(med => {
+                categorySum += Number(med.stock_quantity);
+            });
+
+            totalAllMedicines += categorySum;
+
+            if (categorySum > maxCategoryValue) {
+                maxCategoryValue = categorySum;
+            }
+
+            report.push({
+                categoryName: category.name,
+                totalQuantity: categorySum,
+                medicines: medicinesInCategory.map(med => ({
+                    name: med.trade_name,
+                    quantity: med.stock_quantity
+                }))
+            });
+        });
+
+        res.json({
+            totalAllMedicines,
+            maxCategoryValue,
+            report
+        });
+
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 
 app.get('/categories', async (req, res) => {
     const { data, error } = await supabase
@@ -149,6 +205,7 @@ app.post('/register', async (req, res) => {
 
     res.json({ message: 'Реєстрація успішна' });
 });
+
 
 app.post('/login', async (req, res) => {
     const { login, password } = req.body;

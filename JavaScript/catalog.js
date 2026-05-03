@@ -34,7 +34,6 @@ async function loadCategories() {
     }
 }
 
-
 categoriesContainer.addEventListener('click', (e) => {
     if (e.target.tagName !== 'BUTTON') return;
 
@@ -55,7 +54,6 @@ categoriesContainer.addEventListener('click', (e) => {
     applyFilters();
 });
 
-
 range.addEventListener('input', function () {
     minPrice.textContent = range.value;
 
@@ -64,7 +62,6 @@ range.addEventListener('input', function () {
 
     applyFilters();
 });
-
 
 function renderProducts(items) {
     productsContainer.innerHTML = '';
@@ -94,7 +91,6 @@ function renderProducts(items) {
         visibleCount >= items.length ? "none" : "block";
 }
 
-
 loadMoreBtn.addEventListener('click', () => {
     visibleCount += STEP;
     renderProducts(filteredMedicines);
@@ -105,7 +101,6 @@ searchInput.addEventListener('input', () => {
     visibleCount = 8;
     applyFilters();
 });
-
 
 function applyFilters() {
     const maxPrice = Number(range.value);
@@ -128,7 +123,6 @@ function applyFilters() {
 
     renderProducts(filteredMedicines);
 }
-
 
 async function loadMedicines() {
     try {
@@ -154,7 +148,6 @@ async function loadMedicines() {
     }
 }
 
-
 async function checkAuth() {
     try {
         const res = await fetch('http://localhost:3000/me', {
@@ -171,7 +164,6 @@ async function checkAuth() {
         console.error('Auth error:', err);
     }
 }
-
 
 loadCategories();
 loadMedicines();
