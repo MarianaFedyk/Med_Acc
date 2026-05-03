@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages</title>
+
+    <link rel="stylesheet" href="style/messages.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="data/pharma.png">
+            <a href="index.html">MedAcc</a>
+        </div>
+
+        <div class="user">
+            <a href="LogIn.html">
+                <img id="userIcon" src="data/user.png" alt="Користувач">
+            </a>
+        </div>
+    </header>
+
+    <main class="messages-page">
+
+        <div class="messages-card">
+            <p class="title">Повідомлення:</p>
+
+            <div class="table-head">
+                <p>E-mail</p>
+                <p>Логін</p>
+                <p>Повідомлення:</p>
+            </div>
+
+            <div class="messages-list" id="messagesList">
+                <!-- сюди JS вставлятиме записи -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box">
+            <p class="popup-title">Повне повідомлення</p>
+            <p id="popupText"></p>
+            <button onclick="closePopup()">Закрити</button>
+        </div>
+    </div>
+
+    <script src="JavaScript/messages.js"></script>
+</body>
+</html>

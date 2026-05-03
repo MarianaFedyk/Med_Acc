@@ -102,13 +102,22 @@ color:#5BBCD9;
 font-size: 2.5vw;
 }
 
-.block-LastActions { grid-area: 5 / 1 / 6 / 2; 
+.block-Messages { grid-area: 5 / 1 / 6 / 2; 
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-color:#5BBCD9;
-font-size: 2vw;
+}
+
+.block-Messages a{
+    text-decoration: none;
+    color: #5BBCD9;
+    font-size: 2vw;
+    transition: transform 0.3s ease;
+}
+
+.block-Messages a:hover{
+    transform: scale(1.1);
 }
 
 footer{

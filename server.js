@@ -272,6 +272,19 @@ app.post('/send-message', async (req, res) => {
     res.json({ message: 'Повідомлення успішно надіслано!' });
 });
 
+app.get('/get-messages', requireAdmin, async (req, res) => {
+    const { data, error } = await supabase
+        .from('messages')
+        .select('*')
+        .order('id', { ascending: false });
+
+    if (error) {
+        return res.status(500).json({ message: error.message });
+    }
+
+    res.json(data);
+});
+
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server running on port ${PORT}`);
